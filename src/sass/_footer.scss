@@ -26,27 +26,52 @@ a {
   }
 }
 .footer-top {
-  height: 595px;
-  background-color: #F7F8FB;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  .d-flex
-  h2 {
-    font-family: Roboto;
-    margin-bottom: 46px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 62px;
-    color: $black-color;
+
+  position: relative;
+  z-index: 1;
+  &:after{
+    content: "";
+    position: absolute;
+    top:-167px;
+    left: 275px;
+    background-image: url('../assets/Group 206.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 135px;
+    z-index: -1;
   }
-  h5 {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 36px;
-    text-align: center;
-    color: #2C2C2E
+
+  .d-flex {
+    h2 {
+      font-family: Roboto;
+      margin-top: 59px;
+      margin-bottom: 46px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 62px;
+      color: $black-color;
+    }
+    h5 {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 36px;
+      text-align: center;
+      color: #2C2C2E
+    }
+    .panel-text {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 30px;
+      text-align: center;
+    }
   }
 }

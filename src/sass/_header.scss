@@ -2,10 +2,14 @@
 header {
   font-family:Catamaran;
   width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
   .nav-m {
     height: 80px;
     background: $white-color;
-    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
   }
   .nav-right {
     a {
@@ -34,6 +38,4 @@ header {
       height: 48px;
     }
   }
-
-
 }

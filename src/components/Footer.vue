@@ -2,18 +2,19 @@
   <div>
     <div  class="container-fluid footer-top">
       <div class="col-8 offset-2">
-        <div class="d-flex justify-content-center align-items-center" > <h2>Why Mediusware?</h2></div>
+        <div class="align-items-center" > <h2>Why Mediusware?</h2></div>
         <div class="row">
           <div link class="col-md-4" v-for="(item,index) in  whymedius" :key="index">
-          <div  class="panel panel-default" >
-              <div style="text-align: center" ><img :src="item.image" alt=""></div>
-              <h5 style="text-align: center" class="panel-title">{{item.title}}</h5>
+          <div  class="panel panel-default">
+              <div style="text-align: center;  padding-bottom: 40px;" ><img :src="item.image" alt=""></div>
+              <h5 style="text-align: center ; padding-bottom: 16px; margin-right: 75px" class="panel-title">{{item.title}}</h5>
               <p class="panel-text">{{item.para}}</p>
            </div>
           </div>
           </div>
         </div>
       </div>
+
     <footer class="bg-light text-lg-start">
       <div  class="container-fluid">
         <div class="col-10 offset-1">
@@ -104,5 +105,15 @@ export default {
 </script>
 
 <style lang="scss">
-
+.panel-text{
+  text-align: center;
+  padding-bottom: 105px;
+  margin-right:75px;
+}
+.align-items-center{
+  text-align: center;
+  h2{
+    padding-top: 59px;
+  }
+}
 </style>

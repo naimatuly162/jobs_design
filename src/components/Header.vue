@@ -3,7 +3,6 @@
     <!-- Navbar -->
 
     <div class="container-fluid">
-      <div class="row">
         <div class="col-8 offset-2">
           <nav class="navbar nav-m navbar-expand-lg navbar-light bg-light">
               <!-- Toggle button -->
@@ -41,7 +40,6 @@
               </div>
           </nav>
         </div>
-      </div>
     </div>
   </header>
 
@@ -58,7 +56,6 @@ export default {
       ]
     }
   }
-
 }
 
 </script>
