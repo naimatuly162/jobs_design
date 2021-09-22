@@ -12,7 +12,7 @@
 
     <div class="container-fluid" style="background-color: #f7f8fb;">
       <div class="row">
-        <div class="tab-content" style="margin-bottom: 100px;">
+        <div class="tab-content">
           <div class="col-8 body-alignment offset-2">
             <div class="row">
               <div class="col-md-6" v-for="(item,index) in card" :key="index">
@@ -27,17 +27,32 @@
                 </div>
               </div>
 
-              <div class="card-view">
-                <div class="card-body d-flex justify-content-center align-items-center h-100">
-                  <a href="#" class="card-link"><span>View more</span> <i class="fa fa-plus"></i></a>
-                </div>
-              </div>
+<!--              <div class="card-view">-->
+<!--                <div class="card-body d-flex justify-content-center align-items-center h-100">-->
+<!--                  <a href="#" class="card-link"><span>View more</span> <i class="fa fa-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
 
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div  class="container-fluid footer-top">
+      <div class="col-8 offset-2">
+        <div class="align-items-center" > <h2>Why Mediusware?</h2></div>
+        <div class="row">
+          <div link class="col-md-4" v-for="(item,index) in  whymedius" :key="index">
+            <div  class="panel panel-default">
+              <div style="text-align: center;  padding-bottom: 40px;" ><img :src="item.image" alt=""></div>
+              <h3 style="text-align: center ; padding-bottom: 16px; font-size:20px;" class="panel-title">{{item.title}}</h3>
+             <p class="panel-text">{{item.para}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </template>
@@ -104,103 +119,32 @@ export default {
           vacancy: '05',
           route: ''
         },
-      ]
+      ],
+      whymedius:[
+        {image:require('../assets/209434381.svg'), title:'Friendly Environment', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
+        {image:require('../assets/209438921.svg'), title:'Dynamic Team', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
+        {image:require('../assets/209449991.svg'), title:'Great Working Culture', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
+      ],
     }
   }
 }
 
 </script>
 <style lang="scss">
-.col-md-6 {
-  border-radius: 13px;
-  &:nth-child(2n) {
-    margin-top: -82px;
-  }
+.tab-content{
+  margin-bottom: 100px;
+  margin-top: 180px;
 }
-.card {
-  height: 508px;
-  padding: 50px 96px;
-  background: #fff;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  .card-body {
-    font-family: Open Sans;
-    h2 {
-      font-size: 32px;
-      line-height: 62px;
-      font-weight: 600;
-      margin-top: 42px;
-      margin-bottom: 16px;
-      color: #0060af;
-    }
-    .card-subtitle {
-      font-size: 18px;
-      line-height: 40px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #3a3a3c!important;
-    }
-
-    .card-text {
-      font-size: 18px;
-      line-height: 40px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #3a3a3c;
-    }
-    .card-link {
-      font-size: 18px;
-      line-height: 40px;
-      font-weight: 600;
-      margin-top: 66px;
-      color: #0060af !important;
-      display: inline-block;
-      overflow: hidden;
-      transition: all .5s;
-    }
-  }
-}
-
-.body-alignment {
-  margin: 180px 0;
-  position: relative;
-
-  margin-bottom: 0 !important;
-}
-
-.body-alignment{
-  position: relative;
-  z-index: 9;
-  &:after{
-    content: "";
-    position: absolute;
-    top: -88px;
-    left: -30px;
-    background-image: url('../assets/Group 206.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 135px;
-    z-index: -1;
-  }
-}
-.card-view{
-  width: 545px;
-  height: 200px;
-  background: #FFFFFF;
-  border-radius: 13px;
-  span{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 40px;
-    color: #0060AF!important;
-    font-family: Roboto;
+.footer-top {
+  p {
+     font-family: Poppins;
+    width: 328px;
+    margin: 0 auto;
     font-style: normal;
-    padding-right: 2px;
-  }
-  i{
-    color: #0060AF!important;
-  }
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 105px;
+    text-align: center;
+}
 }
 </style>

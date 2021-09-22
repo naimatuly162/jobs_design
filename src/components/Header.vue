@@ -29,11 +29,11 @@
                     <li link v-for="(menu,index) in menubar" :key="index" class="nav-item" :to="menu.route">
                       <a class="nav-link" :href="menu.route">{{ menu.title }}</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" style="margin-right: 0">
-                        <button class="btn btn-primary" href="#">Login</button>
-                      </a>
-                    </li>
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" style="margin-right: 0">-->
+<!--                        <button class="btn btn-primary" href="#">Login</button>-->
+<!--                      </a>-->
+<!--                    </li>-->
                   </ul>
                 </div>
                 <!-- Right elements -->
@@ -47,12 +47,18 @@
 <script>
 export default {
   name: 'Header',
-
   data() {
     return {
       menubar: [
-        {title: 'Back to Home', route: 'home'},
-        {title: 'Contact us', route: 'contact'},
+        // {title: 'Back to Home', route: 'home'},
+        // {title: 'Contact us', route: 'contact'},
+        {title: 'Home', route: 'home'},
+        {title: 'Service', route: 'service'},
+        {title: 'Projects', route: 'projects'},
+        {title: 'About', route: 'about'},
+        {title: 'Career', route: 'career'},
+        {title: 'Contact', route: 'contact'},
+
       ]
     }
   }

@@ -1,20 +1,5 @@
 <template>
   <div>
-    <div  class="container-fluid footer-top">
-      <div class="col-8 offset-2">
-        <div class="align-items-center" > <h2>Why Mediusware?</h2></div>
-        <div class="row">
-          <div link class="col-md-4" v-for="(item,index) in  whymedius" :key="index">
-          <div  class="panel panel-default">
-              <div style="text-align: center;  padding-bottom: 40px;" ><img :src="item.image" alt=""></div>
-              <h5 style="text-align: center ; padding-bottom: 16px; margin-right: 75px" class="panel-title">{{item.title}}</h5>
-              <p class="panel-text">{{item.para}}</p>
-           </div>
-          </div>
-          </div>
-        </div>
-      </div>
-
     <footer class="bg-light text-lg-start">
       <div  class="container-fluid">
         <div class="col-10 offset-1">
@@ -42,15 +27,15 @@
 
           <div class="col-sm-6 col-lg-3">
             <div class="title"> Bangladesh Address </div>
-            <div link v-for="(item,index) in address" :key="index" class="d-flex flex-item align-items-start" :to="item.image">
-              <img :src="item.image" alt=""><p>{{item.name}}</p>
+            <div link v-for="(item,index) in bdAddress" :key="index" class="d-flex flex-item align-items-baseline" :to="item.image">
+              <img :src="item.image" alt=""><i class="address-icon"  :class="item.icon"></i><a>{{item.name}}</a>
             </div>
           </div>
 
           <div class="col-sm-6 col-lg-3">
-            <div class="title"> USA Address</div>
-            <div link v-for="(item,index) in address" :key="index" class="d-flex flex-item align-items-start" :to="item.img">
-              <img :src="item.img" alt=""><a>{{item.title}}</a>
+            <div class="title">USA Address</div>
+            <div link v-for="(item,index) in usaAddress" :key="index" class="d-flex flex-item align-items-baseline" :to="item.img">
+              <img :src="item.img" alt=""><i class="address-icon" :class="item.icon"></i><a>{{item.title}}</a>
             </div>
           </div>
         </div>
@@ -67,16 +52,14 @@ export default {
   name: "Footer",
   data(){
     return{
-      whymedius:[
-        {image:require('../assets/209434381.svg'), title:'Friendly Environment', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
-        {image:require('../assets/209438921.svg'), title:'Dynamic Team', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
-        {image:require('../assets/209449991.svg'), title:'Great Working Culture', para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc lobortis ullamcorper nunc nisi augue non.'},
-      ],
       social:[
         {route:'https://www.facebook.com/mediusware',icon:'fa fa-facebook'},
         {route:'https://twitter.com/MediuswareLtd',icon:'fa fa-twitter'},
+        {route:'https://www.pinterest.com/mediusware',icon:'fa fa-pinterest-p'},
         {route:'https://www.linkedin.com/company/mediusware-ltd',icon:'fa fa-linkedin'},
         {route:'https://www.instagram.com/mediusware',icon:'fa fa-instagram'},
+
+
       ],
       itService:[
         {name:'Web Solution',route:'solution'},
@@ -89,15 +72,17 @@ export default {
         {name:'SQA',route:'sqa'},
         {name:'Digital Marketing Solution',route:'marketing'}
       ],
-      address:[
-        {name:'18/5 Ring Road, Mohammadpur, Dhaka',image:''},
-        {name:'+8801750020408',image:''},
-        {name:'contact@mediusware.com',image:''},
-        {name:'Monday to Friday: 9 AM - 6 PM',image:''},
-        {title:'1903 commonwealth st, Houston tx 77006',img:''},
-        {title:'+1 (978) 431-0122',img:''},
-        {title:'contact@mediusware.com',img:''},
-        {title:'Monday to Friday: 9 AM - 6 PM',img:''},
+      bdAddress:[
+        {name:'18/5 Ring Road, Mohammadpur, Dhaka',image:'',icon:'fa fa-map-marker'},
+        {name:'+8801750020408',image:'',icon:'fa fa-phone',route:''},
+        {name:'contact@mediusware.com',image:'',icon:'fa fa-envelope',route: 'mailto:contact@mediusware.com'},
+        {name:'Monday to Friday: 9 AM - 6 PM',image:'',icon:'fa fa-clock-o'},
+          ],
+      usaAddress:[
+        {title:'1903 commonwealth st, Houston tx 77006',img:'',icon:'fa fa-map-marker'},
+        {title:'+1 (978) 431-0122',img:'',icon:'fa fa-phone'},
+        {title:'contact@mediusware.com',img:'',icon:'fa fa-envelope'},
+        {title:'Monday to Friday: 9 AM - 6 PM',img:'',icon:'fa fa-clock-o'},
       ]
     }
   },
@@ -105,15 +90,9 @@ export default {
 </script>
 
 <style lang="scss">
-.panel-text{
-  text-align: center;
-  padding-bottom: 105px;
-  margin-right:75px;
-}
-.align-items-center{
-  text-align: center;
-  h2{
-    padding-top: 59px;
-  }
+.address-icon{
+  color: #0B70E1;
+  font-size: 20px !important;
+  margin-right: 10px ;
 }
 </style>

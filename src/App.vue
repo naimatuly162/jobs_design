@@ -1,25 +1,25 @@
 
 <template>
   <div id="app">
- <Main>
- </Main>
+<!-- <Main>-->
+<!--   <router-view></router-view>-->
+<!-- </Main>-->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Main from "./components/Main.vue";
+
 
 export default {
   name: "App",
   components: {
-   Main,
   },
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Catamaran;
 
 }
 </style>
