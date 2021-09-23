@@ -11,8 +11,11 @@
   display: flex;
   align-items: center;
   background-image: url('../assets/footer-5.png');
-  height: 521px;
   margin-bottom: 0px;
+  padding: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .title {
     font-size: 22px;
     line-height: 40px;
@@ -43,5 +46,4 @@
     background-color: #0B70E1;
     color: $white-color;
   }
-
 }

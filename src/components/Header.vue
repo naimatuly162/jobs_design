@@ -3,7 +3,7 @@
     <!-- Navbar -->
 
     <div class="container-fluid">
-        <div class="col-8 offset-2">
+        <div class="col-md-12 nav-header">
           <nav class="navbar nav-m navbar-expand-lg navbar-light bg-light">
               <!-- Toggle button -->
               <button
@@ -15,15 +15,14 @@
                   aria-expanded="false"
                   aria-label="Toggle navigation"
               >
-                <i class="fas fa-bars"></i>
+                <i class="fa fa-bars"></i>
               </button>
               <!-- Collapsible wrapper -->
               <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <div>
-                  <img class="navbar-brand btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
+                  <img class="navbar-brand nav-logo btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
                 </div>
-
                 <div>
                   <ul class="navbar-nav nav-right me-auto mb-2 mb-lg-0">
                     <li link v-for="(menu,index) in menubar" :key="index" class="nav-item" :to="menu.route">
@@ -66,5 +65,16 @@ export default {
 
 </script>
 <style lang="scss">
-
+//.navbar-light .navbar-toggler-icon {
+//  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='htt…dth='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E;")
+//}
+//.navbar-toggler-icon {
+//  display: inline-block;
+//  width: 1.5em;
+//  height: 1.5em;
+//  vertical-align: middle;
+//  background-repeat: no-repeat;
+//  background-position: 50%;
+//  background-size: 100%;
+//}
 </style>
