@@ -10,12 +10,12 @@
       </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #f7f8fb;">
+    <div class="container-fluid" style="background-color: #f7f8fb;"><div class="col-md-12 body-style">
       <div class="row">
         <div class="tab-content">
-          <div class="col-8 body-alignment offset-2">
+          <div class="body-alignment">
             <div class="row">
-              <div class="col-md-6" v-for="(item,index) in card" :key="index">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 card-content" v-for="(item,index) in card" :key="index">
                 <div class="card">
                   <div class="card-body">
                     <img :src="item.image" alt="">
@@ -25,36 +25,35 @@
                     <a :href="item.route" class="card-link">Read more  <img src="../assets/arrow-right 2.png"></a>
                   </div>
                 </div>
+                </div>
               </div>
-
 <!--              <div class="card-view">-->
 <!--                <div class="card-body d-flex justify-content-center align-items-center h-100">-->
 <!--                  <a href="#" class="card-link"><span>View more</span> <i class="fa fa-plus"></i></a>-->
 <!--                </div>-->
 <!--              </div>-->
-
             </div>
           </div>
         </div>
       </div>
     </div>
     <div  class="container-fluid footer-top">
-      <div class="col-8 offset-2">
+      <div class="col-md-12">
+        <div class="footer-content">
         <div class="align-items-center" > <h2>Why Mediusware?</h2></div>
         <div class="row">
-          <div link class="col-md-4" v-for="(item,index) in  whymedius" :key="index">
+          <div link class="col-lg-4 col-md-12 col-sm-12 " v-for="(item,index) in  whymedius" :key="index">
             <div  class="panel panel-default">
-              <div style="text-align: center;  padding-bottom: 40px;" ><img :src="item.image" alt=""></div>
-              <h3 style="text-align: center ; padding-bottom: 16px; font-size:20px;" class="panel-title">{{item.title}}</h3>
+              <div class="footer-image" style="text-align: center; margin-right: 75px;  padding-bottom: 40px;" ><img :src="item.image" alt=""></div>
+              <h3 style="text-align: center; margin-right: 75px; padding-bottom: 16px; font-size:20px;" class="panel-title">{{item.title}}</h3>
              <p class="panel-text">{{item.para}}</p>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -137,14 +136,16 @@ export default {
 }
 .footer-top {
   p {
-     font-family: Poppins;
-    width: 328px;
+    font-family: Poppins;
     margin: 0 auto;
-    font-style: normal;
-    font-weight: normal;
     line-height: 30px;
     margin-bottom: 105px;
+    margin-right: 75px;
     text-align: center;
 }
+  .footer-content{
+    margin-right: 165px;
+    margin-left: 165px;
+  }
 }
 </style>
