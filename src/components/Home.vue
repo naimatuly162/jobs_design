@@ -10,8 +10,10 @@
       </div>
     </div>
 
-    <div class="container-fluid" style="background-color: #f7f8fb;"><div class="col-md-12 body-style">
+    <div class="container-fluid" style="background-color: #f7f8fb;">
       <div class="row">
+        <div class="col-md-12 body-style">
+          <div class="col-10 offset-1">
         <div class="tab-content">
           <div class="body-alignment">
             <div class="row">
@@ -26,6 +28,7 @@
                   </div>
                 </div>
                 </div>
+            </div>
               </div>
 <!--              <div class="card-view">-->
 <!--                <div class="card-body d-flex justify-content-center align-items-center h-100">-->
