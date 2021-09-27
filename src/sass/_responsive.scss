@@ -1,43 +1,64 @@
-@media (min-height: 900px) {
+
+
+
+@include media-breakpoint-down(sm) {
+  .footer-top p {
+    font-size: 10px !important;
+    color: red !important;
+  }
+}
+
+
+@media (max-width: 1370px) {
+  .card {
+    padding: 43px 46px !important;
+  }
+}
+
+@media (min-width: 990px) {
+  .card .card-body h2 {
+    font-size: 24px !important;
+  }
+  }
+
+
+@media (max-width: 1000px) {
   .card {
     margin-right: 30px !important;
     margin-left: 30px !important;
   }
 }
-@media (min-height: 378px) {
+@media (min-width: 378px) {
   .footer-top p {
     padding: 0 !important;
   }
 }
-@media(min-width: 1000px) {
+@media(min-width: 980px) {
   .card-content {
     border-radius: 13px;
+
     &:nth-child(2n) {
       margin-top: -82px;
     }
   }
 }
-
 @media (max-width: 1250px) {
   .footer-content, .body-alignment, .nav-m {
     margin-right: 0 !important;
-    margin-left: 20px!important;
+    margin-left: 20px !important;
     margin-bottom: 0 !important;
   }
-  .tab-content{
+  .tab-content {
     padding: 20px;
   }
   .footer-top {
     position: absolute;
-
     p, h3, .footer-image {
       margin-right: 0 !important;
     }
-
     p {
       padding: 0 169px;
     }
-
     h2 {
       padding: 0 !important;
       color: #0060AF !important;

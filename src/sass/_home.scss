@@ -3,11 +3,9 @@ h1 {
   font-size: 42px;
   color: $white-color;
 }
-
 .col-lg-6 {
   padding: 0 !important;
 }
-
 .text-white {
   a {
     background: $text-color;
@@ -16,17 +14,14 @@ h1 {
     font-weight: 500;
     border-radius: 40px;
     border: none;
-
     i {
       margin-right: 15px;
     }
   }
 }
-
 .p-5 {
   padding: 0 !important;
 }
-
 .bg-image.mask {
   position: relative;
   height: 202px;
@@ -43,18 +38,21 @@ h1 {
     z-index: -1;
   }
 }
+
 //.card-content{
 //  width: 545px;
 //  display: flex;
 //}
 
 .card {
+
   margin: 0;
   padding: 42px 96px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 13px;
   margin-bottom: 20px;
   margin-right: 20px;
+  border: none!important;
 
   .card-body {
     font-family: Open Sans;
