@@ -1,7 +1,7 @@
 <template>
   <div>
     <footer class="bg-light text-lg-start">
-      <div class="container-fluidn">
+      <div class="container-fluid">
         <div class="col-10 offset-1">
           <div class="row">
             <div class="col-sm-6 col-lg-3">
