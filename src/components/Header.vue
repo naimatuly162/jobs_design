@@ -3,48 +3,63 @@
     <!-- Navbar -->
     <div class="container-fluid">
       <div class="row">
-      <div class="col-md-12 nav-header">
-        <nav class="navbar nav-m navbar-expand-lg">
-          <!-- Toggle button -->
-          <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <!-- Navbar brand -->
-            <div>
-              <img class="navbar-brand nav-logo btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
+        <div class="col-md-12 nav-header">
+          <nav class="navbar nav-m navbar-expand-lg">
+            <!-- Toggle button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+              <label id="icon">
+                <i class="fa fa-bars"></i>
+              </label>
+
+            </button>
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <!-- Navbar brand -->
+              <div>
+                <img class="navbar-brand nav-logo btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
+              </div>
+              <div>
+                <ul class="navbar-nav nav-right me-auto mb-2 mb-lg-0">
+                  <li link v-for="(menu,index) in menubar" :key="index" class="nav-item" :to="menu.route">
+                    <a class="nav-link" :href="menu.route">{{ menu.title }}</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Right elements -->
             </div>
-            <div>
-              <ul class="navbar-nav nav-right me-auto mb-2 mb-lg-0">
-                <li link v-for="(menu,index) in menubar" :key="index" class="nav-item" :to="menu.route">
-                  <a class="nav-link" :href="menu.route">{{ menu.title }}</a>
-                </li>
-                <!--                    <li class="nav-item">-->
-                <!--                      <a class="nav-link" style="margin-right: 0">-->
-                <!--                        <button class="btn btn-primary" href="#">Login</button>-->
-                <!--                      </a>-->
-                <!--                    </li>-->
-              </ul>
-            </div>
-            <!-- Right elements -->
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
       </div>
 
     </div>
   </header>
 
 </template>
+
+<!--<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script>
+
+$(document).ready(function () {
+  $('#icon').click(function () {
+    $('li').navbar - toggler('show')
+
+  });
+
+});
+
+</script>-->
+
 <script>
 export default {
   name: 'Header',
@@ -66,6 +81,7 @@ export default {
 }
 
 </script>
+
 <style lang="scss">
 
 //.navbar-light .navbar-toggler-icon {

@@ -1,49 +1,6 @@
 
-
-
-@include media-breakpoint-down(sm) {
-  .footer-top p {
-    font-size: 10px !important;
-    color: red !important;
-  }
-}
-
-
-@media (max-width: 1370px) {
-  .card {
-    padding: 43px 46px !important;
-  }
-}
-
-@media (min-width: 990px) {
-  .card .card-body h2 {
-    font-size: 24px !important;
-  }
-  }
-
-
-@media (max-width: 1000px) {
-  .card {
-    margin-right: 30px !important;
-    margin-left: 30px !important;
-  }
-}
-@media (min-width: 378px) {
-  .footer-top p {
-    padding: 0 !important;
-  }
-}
-@media(min-width: 980px) {
-  .card-content {
-    border-radius: 13px;
-
-    &:nth-child(2n) {
-      margin-top: -82px;
-    }
-  }
-}
-@media (max-width: 1250px) {
-  .footer-content, .body-alignment, .nav-m {
+@include media-breakpoint-up(xl){
+  .footer-content{
     margin-right: 0 !important;
     margin-left: 20px !important;
     margin-bottom: 0 !important;
@@ -52,7 +9,7 @@
     padding: 20px;
   }
   .footer-top {
-    position: absolute;
+
     p, h3, .footer-image {
       margin-right: 0 !important;
     }
@@ -76,6 +33,94 @@
       width: 216px !important;
       height: 128px !important;
       z-index: -1;
+    }
+  }
+}
+@media (min-width: 575px) and (max-width: 680px) {
+  footer{
+    .flex-item{
+      a{
+        font-size: 13px!important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card .card-body h2 {
+    font-size: 24px !important;
+  }
+ }
+
+@media (max-width: 1370px) {
+.card {
+padding: 43px 46px !important;
+}
+}
+
+
+//@media (max-width: 990px) {
+//.card .card-body h2 {
+//font-size: 24px !important;
+//}
+//}
+
+
+@media (max-width: 1000px) {
+.card {
+margin-right: 30px !important;
+margin-left: 30px !important;
+}
+}
+@media (min-width: 378px) {
+.footer-top p {
+padding: 0 !important;
+}
+}
+@media(min-width: 991px) {
+.card-content {
+border-radius: 13px;
+
+&:nth-child(2n) {
+  margin-top: -82px;
+}
+}
+}
+
+
+@media (max-width: 507px) {
+  .text-white{
+    h1{
+      font-size: 31px!important;
+    }
+  }
+  .footer-top p {
+    padding: 0 !important;
+  }
+  .card {
+    padding: 30px 20px !important;
+    margin-left:0!important;
+    margin-right:0!important;
+    .card-body {
+      .card-logo{
+        height: 50px;
+      }
+      h2 {
+        font-size: 13px !important;
+        line-height: 32px !important;
+      }
+      h6{
+        font-size: 14px!important;
+      }
+      .card-link {
+        font-size: 14px!important;
+        line-height: 10px!important;
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+        img{
+          width: 25px!important;
+        }
+      }
     }
   }
 }

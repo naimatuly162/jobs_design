@@ -3,6 +3,7 @@ h1 {
   font-size: 42px;
   color: $white-color;
 }
+
 .col-lg-6 {
   padding: 0 !important;
 }
@@ -14,14 +15,17 @@ h1 {
     font-weight: 500;
     border-radius: 40px;
     border: none;
+
     i {
       margin-right: 15px;
     }
   }
 }
+
 .p-5 {
   padding: 0 !important;
 }
+
 .bg-image.mask {
   position: relative;
   height: 202px;
@@ -45,18 +49,17 @@ h1 {
 //}
 
 .card {
-
-  margin: 0;
+  margin: 0 20px 20px 0;
   padding: 42px 96px;
   background: #fff;
   border-radius: 13px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  border: none!important;
+  border: none !important;
+  @include media-breakpoint-down(xxl) {
+    padding: 38px 60px;
+  }
 
   .card-body {
     font-family: Open Sans;
-
     h2 {
       font-size: 32px;
       line-height: 62px;
@@ -64,6 +67,16 @@ h1 {
       margin-top: 42px;
       margin-bottom: 16px;
       color: #0060af;
+
+      @media (max-width: 1537px) and (min-width: 991px){
+        font-size: 25px;
+      }
+      //@include media-breakpoint-down(xxl) {
+      //  font-size: 23px;
+      //}
+      @include media-breakpoint-down(xl) {
+        font-size: 21px;
+      }
     }
 
     .card-subtitle {
@@ -87,6 +100,7 @@ h1 {
       line-height: 40px;
       font-weight: 600;
       margin-top: 66px;
+      text-decoration: none;
       color: #0060af !important;
       display: inline-block;
       overflow: hidden;
@@ -100,6 +114,11 @@ h1 {
   margin-bottom: 0 !important;
   margin-right: 165px;
   margin-left: 165px;
+
+  @include media-breakpoint-down(md){
+    margin-right: 0!important;
+    margin-left: 0!important;
+  }
 }
 
 .body-alignment {
@@ -176,7 +195,22 @@ h1 {
     font-size: 20px;
     line-height: 36px;
     text-align: center;
-    color: #2C2C2E
+    color: #2C2C2E;
+
+    @include media-breakpoint-down(lg){
+      font-size:14px!important;
+    }
+    @include media-breakpoint-down(md)
+    {
+      font-size: 20px!important;
+    }
+  }
+  .panel-text{
+    @include media-breakpoint-down(md)
+    {
+      padding-left: 65px!important;
+      padding-right: 65px!important;
+    }
   }
 
   .align-items-center {

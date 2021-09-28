@@ -16,7 +16,7 @@
               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 card-content" v-for="(item,index) in card" :key="index">
                 <div class="card">
                   <div class="card-body">
-                    <img :src="item.image" alt="">
+                    <img :src="item.image" alt="" class="card-logo">
                     <h2 class="card-title">{{ item.title }}</h2>
                     <h6 class="card-subtitle mb-2 text-muted">Deadline : {{ item.deadline }}</h6>
                     <h6 class="card-text">Vacancy : {{ item.vacancy }}</h6>
