@@ -1,6 +1,5 @@
-
-@include media-breakpoint-up(xl){
-  .footer-content{
+@include media-breakpoint-up(xl) {
+  .footer-content {
     margin-right: 0 !important;
     margin-left: 20px !important;
     margin-bottom: 0 !important;
@@ -9,19 +8,21 @@
     padding: 20px;
   }
   .footer-top {
-
     p, h3, .footer-image {
       margin-right: 0 !important;
     }
+
     p {
       padding: 0 169px;
     }
+
     h2 {
       padding: 0 !important;
       color: #0060AF !important;
       padding-bottom: 16px !important;
       border-bottom: 1px solid rgba(0, 96, 175, 0.2);
     }
+
     &:after {
       content: "";
       position: absolute;
@@ -36,11 +37,12 @@
     }
   }
 }
+
 @media (min-width: 575px) and (max-width: 680px) {
-  footer{
-    .flex-item{
-      a{
-        font-size: 13px!important;
+  footer {
+    .flex-item {
+      a {
+        font-size: 13px !important;
       }
     }
   }
@@ -50,14 +52,13 @@
   .card .card-body h2 {
     font-size: 24px !important;
   }
- }
+}
 
 @media (max-width: 1370px) {
-.card {
-padding: 43px 46px !important;
+  .card {
+    padding: 43px 46px !important;
+  }
 }
-}
-
 
 //@media (max-width: 990px) {
 //.card .card-body h2 {
@@ -65,33 +66,34 @@ padding: 43px 46px !important;
 //}
 //}
 
-
 @media (max-width: 1000px) {
-.card {
-margin-right: 30px !important;
-margin-left: 30px !important;
+  .card {
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+  }
 }
-}
-@media (min-width: 378px) {
-.footer-top p {
-padding: 0 !important;
-}
-}
-@media(min-width: 991px) {
-.card-content {
-border-radius: 13px;
 
-&:nth-child(2n) {
-  margin-top: -82px;
+@media (min-width: 378px) {
+  .footer-top p {
+    padding: 0 !important;
+  }
 }
-}
+
+@media(min-width: 991px) {
+  .card-content {
+    border-radius: 13px;
+
+    &:nth-child(2n) {
+      margin-top: -82px;
+    }
+  }
 }
 
 
 @media (max-width: 507px) {
-  .text-white{
-    h1{
-      font-size: 31px!important;
+  .text-white {
+    h1 {
+      font-size: 31px !important;
     }
   }
   .footer-top p {
@@ -99,26 +101,31 @@ border-radius: 13px;
   }
   .card {
     padding: 30px 20px !important;
-    margin-left:0!important;
-    margin-right:0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
     .card-body {
-      .card-logo{
+      .card-logo {
         height: 50px;
       }
+
       h2 {
-        font-size: 13px !important;
+        font-size: 16px !important;
         line-height: 32px !important;
       }
-      h6{
-        font-size: 14px!important;
+
+      h6 {
+        font-size: 14px !important;
       }
+
       .card-link {
-        font-size: 14px!important;
-        line-height: 10px!important;
-        margin-top: 0!important;
-        margin-bottom: 0!important;
-        img{
-          width: 25px!important;
+        font-size: 14px !important;
+        line-height: 10px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        img {
+          width: 25px !important;
         }
       }
     }

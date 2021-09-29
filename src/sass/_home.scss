@@ -1,3 +1,53 @@
+
+.mobile-view {
+  font-family: Roboto;
+  color: #FFFFFF;
+  h6{
+    font-weight: normal;
+  }
+  h2{
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  h4{
+    line-height: 16px;
+    letter-spacing: 0.390625px;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.bg-header {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.tab-content {
+  margin-bottom: 100px;
+  margin-top: 180px;
+@include media-breakpoint-down(lg){
+  margin-top: 88px;
+}
+}
+
+
+.card-body-top h2 {
+  font-family: Roboto;
+  padding: 0 !important;
+  color: #0060AF !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid rgba(0, 96, 175, 0.2);
+  margin-top: 42px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 62px;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
 h1 {
   font-weight: bold;
   font-size: 42px;
@@ -7,6 +57,7 @@ h1 {
 .col-lg-6 {
   padding: 0 !important;
 }
+
 .text-white {
   a {
     background: $text-color;
@@ -47,7 +98,6 @@ h1 {
 //  width: 545px;
 //  display: flex;
 //}
-
 .card {
   margin: 0 20px 20px 0;
   padding: 42px 96px;
@@ -57,19 +107,24 @@ h1 {
   @include media-breakpoint-down(xxl) {
     padding: 38px 60px;
   }
+  @media (max-width: 1000px) and (min-width: 991px) {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
 
   .card-body {
     font-family: Open Sans;
+
     h2 {
-      font-size: 32px;
+      font-size: 30px;
       line-height: 62px;
       font-weight: 600;
       margin-top: 42px;
       margin-bottom: 16px;
       color: #0060af;
 
-      @media (max-width: 1537px) and (min-width: 991px){
-        font-size: 25px;
+      @media (max-width: 1537px) and (min-width: 991px) {
+        font-size: 24px;
       }
       //@include media-breakpoint-down(xxl) {
       //  font-size: 23px;
@@ -94,7 +149,6 @@ h1 {
       margin-bottom: 12px;
       color: #3a3a3c;
     }
-
     .card-link {
       font-size: 18px;
       line-height: 40px;
@@ -105,19 +159,25 @@ h1 {
       display: inline-block;
       overflow: hidden;
       transition: all .5s;
+      img{
+        padding-left: 12px;
+      }
     }
   }
 }
-
 .body-alignment {
   position: relative;
   margin-bottom: 0 !important;
   margin-right: 165px;
   margin-left: 165px;
 
-  @include media-breakpoint-down(md){
-    margin-right: 0!important;
-    margin-left: 0!important;
+  @include media-breakpoint-down(xl) {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+  @media (max-width: 991px) and (min-width: 737px) {
+    margin-right: 100px !important;
+    margin-left: 100px !important;
   }
 }
 
@@ -136,6 +196,11 @@ h1 {
     width: 300px;
     height: 135px;
     z-index: -1;
+
+    @include media-breakpoint-down(lg){
+      top: -45px;
+      left: -61px;
+    }
   }
 }
 
@@ -175,6 +240,11 @@ h1 {
     width: 300px;
     height: 135px;
     z-index: -1;
+    @include media-breakpoint-down(md){
+      top: -200px;
+      left: 40px;
+      width: 200px;
+    }
   }
 
   h2 {
@@ -185,7 +255,8 @@ h1 {
     font-weight: 500;
     font-size: 32px;
     line-height: 62px;
-    color: $black-color;
+    color: #0060AF;
+    border-bottom: 1px solid rgba(0, 96, 175, 0.2);
   }
 
   h3 {
@@ -197,19 +268,27 @@ h1 {
     text-align: center;
     color: #2C2C2E;
 
-    @include media-breakpoint-down(lg){
-      font-size:14px!important;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px !important;
     }
-    @include media-breakpoint-down(md)
-    {
-      font-size: 20px!important;
+    @include media-breakpoint-down(md) {
+      font-size: 20px !important;
     }
   }
-  .panel-text{
-    @include media-breakpoint-down(md)
-    {
-      padding-left: 65px!important;
-      padding-right: 65px!important;
+
+  .panel-text {
+    //@include media-breakpoint-up(xxl) {
+    //  width:318px;
+    //
+    //}
+
+    @include media-breakpoint-down(md) {
+      padding-left: 85px !important;
+      padding-right: 85px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
 
@@ -219,6 +298,29 @@ h1 {
     h2 {
       padding-top: 59px;
     }
+  }
+}
+
+.search-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+
+  .btn {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 0.6px solid #E8E8E8;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5.49775px;
+    @include media-breakpoint-down(md) {
+      font-size: 13px!important;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none !important;
   }
 
 }

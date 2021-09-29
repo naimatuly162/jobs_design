@@ -1,9 +1,10 @@
-%border-style{
+%border-style {
   border-bottom: 3px solid $border-color;
   color: $border-color;
 }
+
 header {
-  font-family:Catamaran;
+  font-family: Catamaran;
   width: 100%;
   font-style: normal;
   font-weight: normal;
@@ -12,33 +13,49 @@ header {
 
   line-height: 30px;
   color: #000000;
+
   .nav-m {
     height: 74px;
     background: #FFFFFF;
     margin-right: 165px;
     margin-left: 165px;
+
+    @include media-breakpoint-down(xl) {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
   }
+
+  .nav-mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
   .nav-right {
     a {
       padding: 0;
       font-weight: 500;
       font-size: 18px;
       line-height: 30px;
-      color: #000000 ;
+      color: #000000;
       margin-right: 60px;
       text-align: center;
-      border-bottom: 3px solid transparent;
+      border-bottom: 2px solid transparent;
       padding: 20px 0;
+
       &:hover {
         border-bottom: 3px solid $border-color;
-        color:$border-color;
+        color: $border-color;
       }
-      &:active{
+
+      &:active {
         border-bottom: 3px solid $border-color;
         color: $border-color;
       }
     }
-    .nav-link .btn{
+
+    .nav-link .btn {
       background: #0060AF;
       border-radius: 5.2px;
       width: 120px;

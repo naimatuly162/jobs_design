@@ -5,25 +5,29 @@
       <div class="row">
         <div class="col-md-12 nav-header">
           <nav class="navbar nav-m navbar-expand-lg">
+            <div>
+              <img class="navbar-brand nav-logo nav-mobile btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
+            </div>
             <!-- Toggle button -->
             <button
                 class="navbar-toggler"
                 type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarSupportedContent"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-              <label id="icon">
+              <label data-bs-target="#navbarSupportedContent"
+                     aria-controls="navbarSupportedContent">
                 <i class="fa fa-bars"></i>
               </label>
-
             </button>
+
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
               <!-- Navbar brand -->
-              <div>
+              <div class="collapse navbar-collapse justify-content-between">
                 <img class="navbar-brand nav-logo btn-m mt-2 mt-lg-0" src="../assets/logo 1.svg">
               </div>
               <div>
@@ -38,7 +42,6 @@
           </nav>
         </div>
       </div>
-
     </div>
   </header>
 
@@ -83,6 +86,15 @@ export default {
 </script>
 
 <style lang="scss">
+
+//.navbar-collapse {
+//  display: none;
+//  position: absolute;
+//  min-width: 160px;
+//  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+//  z-index: 1;
+//  width: 100%;
+//}
 
 //.navbar-light .navbar-toggler-icon {
 //  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='htt…dth='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E;")
