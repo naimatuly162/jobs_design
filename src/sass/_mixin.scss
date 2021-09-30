@@ -11,3 +11,11 @@
   height: 128px;
   z-index: -1;
 }
+
+@mixin job-details-list{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 36px;
+  color: #2C2C2E!important;
+}

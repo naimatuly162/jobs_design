@@ -2,18 +2,14 @@
   border-bottom: 3px solid $border-color;
   color: $border-color;
 }
-
 header {
   font-family: Catamaran;
   width: 100%;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-
-
   line-height: 30px;
   color: #000000;
-
   .nav-m {
     height: 74px;
     background: #FFFFFF;
@@ -25,13 +21,11 @@ header {
       margin-left: 0 !important;
     }
   }
-
   .nav-mobile {
     @include media-breakpoint-up(lg) {
       display: none;
     }
   }
-
   .nav-right {
     a {
       padding: 0;
@@ -43,18 +37,15 @@ header {
       text-align: center;
       border-bottom: 2px solid transparent;
       padding: 20px 0;
-
       &:hover {
         border-bottom: 3px solid $border-color;
         color: $border-color;
       }
-
       &:active {
         border-bottom: 3px solid $border-color;
         color: $border-color;
       }
     }
-
     .nav-link .btn {
       background: #0060AF;
       border-radius: 5.2px;

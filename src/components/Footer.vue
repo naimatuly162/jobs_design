@@ -62,7 +62,6 @@ export default {
         {route: 'https://www.linkedin.com/company/mediusware-ltd', icon: 'fa fa-linkedin'},
         {route: 'https://www.instagram.com/mediusware', icon: 'fa fa-instagram'},
 
-
       ],
       itService: [
         {name: 'Web Solution', route: 'solution'},
