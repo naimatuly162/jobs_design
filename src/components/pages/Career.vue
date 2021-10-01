@@ -3,14 +3,13 @@
     <Header></Header>
 
     <div class="bg-image mask">
-      <div class="d-flex align-items-center h-100" style="margin-left:260px;">
+      <div class="d-flex align-items-center h-100 mobile-show" style="margin-left:260px;">
         <div class="text-white justify-content-center align-items-center">
           <h2 class="title mb-3">Join Our Team at Mediusware</h2>
           <h4 class="sub-title mb-3">UI/UX Designer</h4>
         </div>
       </div>
     </div>
-
     <div class="container-fluid">
       <div class="col-10 offset-1">
         <div class="row">
@@ -53,8 +52,8 @@
                 <div class="requirements">
                   <h5>Requirements</h5>
                   <div v-for="(item,index) in requirements" :key="index">
-                    <img class="image-item"  src="../../assets/jobdetails/bullet-point.svg" alt=""/>
-                    <a>{{item.para}}</a>
+                    <img class="image-item" src="../../assets/jobdetails/bullet-point.svg" alt=""/>
+                    <a>{{ item.para }}</a>
                   </div>
                 </div>
 
@@ -75,7 +74,8 @@
                 <h5>Salary</h5>
                 <p><strong>25k - 30k(Based in skill)</strong></p>
                 <h5>Location</h5>
-                <p><strong>Ring Road, House 18/5, Floor - 2nd Dhaka, 1207</strong></p>
+                <p style="margin-bottom: 48px"><strong>Ring Road, House 18/5, Floor - 2nd Dhaka, 1207</strong></p>
+                <button class="btn btn-default">Apply Now</button>
               </div>
             </div>
 
@@ -86,14 +86,16 @@
                   <div class="w-50">{{ item.title }}</div>
                   <div class="w-50">{{ item.info }}</div>
                 </div>
-                <div  class="apply-btn text-center">
-                <div class="btn btn-default"><a href="#">Apply Now </a></div>
+                <div class="apply-btn text-center">
+                  <a class="btn btn-default" href="#">Apply Now</a>
                 </div>
-              <h5 class="text-center">Share a Job</h5>
-              <div link v-for="(item,index) in socialLink" :key="index" class="d-inline-flex flex-wrap justify-content-center">
-                <a target="_blank" :href="item.route" class="social-icon">
-                  <img :src="item.image" alt="" class="card-link">
-                </a>
+                <h5 class="text-center" style="margin-top: 14px">Share a Job</h5>
+                <div class="social d-flex flex-wrap justify-content-center">
+                  <div  v-for="(item,index) in socialLink" :key="index">
+                    <a :href="item.route">
+                      <img :src="item.image" alt="" class="card-link text-center">
+                    </a>
+                  </div>
 
                 </div>
               </div>
@@ -123,9 +125,11 @@ export default {
         {title: 'Experience:', info: '2 years'},
         {title: 'Salary:', info: 'Tk. 25,000 - 45,000 (Monthly)'},
         {title: 'Job type:', info: 'Full Time'},
-        {title: 'Location:', info: 'Ring Road, House \n' +
+        {
+          title: 'Location:', info: 'Ring Road, House \n' +
               '18/5, Floor - 2nd \n' +
-              'Dhaka, 1207'},
+              'Dhaka, 1207'
+        },
       ],
       appreciate: [
         {para: 'Have a work experience with this UX/UI Sector and have strong portfolio'},
@@ -137,17 +141,19 @@ export default {
       requirements: [
         {para: 'Primary goals will be to design the next generation of web applications, mobile apps, and other mobile interfaces across multiple platforms such as iOS, Android, and mobile web.'},
         {para: 'Illustrate design ideas and user journeys as required using storyboards, process flows, wireframes and sitemaps'},
-        {para: 'Understanding the business requirements and proposing the right solution that suits the Group\n' +
-              'ecosystem'},
+        {
+          para: 'Understanding the business requirements and proposing the right solution that suits the Group\n' +
+              'ecosystem'
+        },
         {para: 'Up-to-date knowledge of design software such as Adobe Creative Cloud, specifically Adobe Illustrator, Adobe XD, Adobe Photoshop, and common wireframe tools\n'},
         {para: 'Excellent communicator, highly organized and detail driven professional with a strong sense of team spirit to collaborate with various internal and external stakeholders\n'},
       ],
-      responsibility:[
+      responsibility: [
         {para: 'Developing wireframes and task flows based on user needs'},
         {para: 'Collaborating with Designers and Developers to create user-friendly software'},
         {para: 'Understand product specifications and user psychology.'},
       ],
-      skill:[
+      skill: [
         {para: 'Good communication skills and good people skills'},
         {para: 'Good problem solving and Analytical skills'},
         {para: 'Good writing skill and proper english'},
@@ -157,8 +163,11 @@ export default {
       socialLink: [
         {route: 'https://www.facebook.com/mediusware', image: require('../../assets/jobdetails/facebook.svg')},
         {route: 'https://twitter.com/MediuswareLtd', image: require('../../assets/jobdetails/twitter.svg')},
-        {route: 'https://www.linkedin.com/company/mediusware-ltd',image: require('../../assets/jobdetails/linkedin.svg')},
-        {route: 'https://www.instagram.com/mediusware',image: require('../../assets/jobdetails/link.svg')},
+        {
+          route: 'https://www.linkedin.com/company/mediusware-ltd',
+          image: require('../../assets/jobdetails/linkedin.svg')
+        },
+        {route: 'https://www.instagram.com/mediusware', image: require('../../assets/jobdetails/link.svg')},
       ],
     }
   }
@@ -166,7 +175,12 @@ export default {
 </script>
 
 <style lang="scss">
-.social-icon{
-
+.social{
+  padding: 0 20px;
+}
+.card-link {
+  margin-bottom: 38px;
+  margin-top: 23px;
+  margin-right: 20px;
 }
 </style>

@@ -73,8 +73,7 @@
           <div class="row">
             <div link class="col-md-4" v-for="(item,index) in  whymedius" :key="index">
               <div class="panel panel-default">
-                <div style="text-align: center;  padding-bottom: 40px;"><img :src="item.image" alt=""
-                                                                             style="width: 200px; height: 134px"></div>
+                <div style="text-align: center;  padding-bottom: 40px;"><img :src="item.image" alt="" style="width: 200px; height: 134px"></div>
                 <h3 style="text-align: center ; padding-bottom: 16px; font-size:20px;" class="panel-title">
                   {{ item.title }}</h3>
                 <p class="panel-text">{{ item.para }}</p>

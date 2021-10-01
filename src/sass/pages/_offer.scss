@@ -1,0 +1,32 @@
+
+.offer-section{
+  font-family: Open Sans;
+
+  h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 62px;
+    color: #0060AF;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(0, 96, 175, 0.1);
+  }
+  .title{
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 32px 24px 32px 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0060AF;
+  }
+  p{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #2C2C2E!important;
+    margin-bottom: 57px;
+  }
+}
